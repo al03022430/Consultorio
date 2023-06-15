@@ -28,7 +28,7 @@ public class Consultorio {
 
         String inputFilenameMedicos = "src/BD/Medicos.cvs";
         String inputFilenamePacientes = "src/BD/Pacientes.cvs";
-        String inputFilenameRecepcionista = "src/BD/Recepcionistas.cvs";
+        String inputFilenameRecepcionista = "src/BD/Citas.cvs";
         BufferedReader bufferedReader = null;
         String Nombre = "";
         String Especialidad = "";

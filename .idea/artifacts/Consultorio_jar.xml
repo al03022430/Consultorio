@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Consultorio:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Consultorio_jar</output-path>
+    <root id="archive" name="Consultorio.jar">
+      <element id="module-output" name="Consultorio" />
+    </root>
+  </artifact>
+</component>

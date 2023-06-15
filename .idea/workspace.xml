@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Consultorio:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc00c672-b125-4081-b378-84dbedcd3a4d" name="Changes" comment="Aplicacion funcionando, correcion de mensajes">
-      <change afterPath="$PROJECT_DIR$/src/BD/Citas.cvs" afterDir="false" />
+    <list default="true" id="fc00c672-b125-4081-b378-84dbedcd3a4d" name="Changes" comment="Correcion de problemas con listado de Pacientes">
+      <change afterPath="$PROJECT_DIR$/src/BD/Pacientes.cvs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BD/Medicos.cvs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BD/Medicos.cvs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BD/Pacientes.cvs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Consultorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consultorio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,14 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "onboarding.tips.debug.path": "/Users/c.edomin/Documents/GitHub/CumputacionJava/Evidencia/Consultorio/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/c.edomin/Documents/GitHub/CumputacionJava/Evidencia/Consultorio/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Consultorio" />
@@ -110,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686801295044</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Correcion de problemas con listado de Pacientes">
+      <created>1686802013677</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686802013677</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -122,7 +136,8 @@
     <MESSAGE value="Menu de Adminstrador Funcionando" />
     <MESSAGE value="Se agregan campos para generar archivos CVS" />
     <MESSAGE value="Aplicacion funcionando, correcion de mensajes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aplicacion funcionando, correcion de mensajes" />
+    <MESSAGE value="Correcion de problemas con listado de Pacientes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correcion de problemas con listado de Pacientes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
