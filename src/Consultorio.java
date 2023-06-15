@@ -151,12 +151,12 @@ public class Consultorio {
             }
         }
     }
-    public static void SavePa(HashMap Paciente){
+    public static void SavePa(HashMap listaPacientes){
         String outputFilename = "src/BD/Pacientes.cvs";
         BufferedWriter bufferedWriter = null;
         try {
             bufferedWriter = new BufferedWriter(new FileWriter(outputFilename));
-            for (Iterator<Map.Entry<Integer, Paciente>> entries = Paciente.entrySet().iterator(); entries.hasNext(); ) {
+            for (Iterator<Map.Entry<Integer, Paciente>> entries = listaPacientes.entrySet().iterator(); entries.hasNext(); ) {
                 Map.Entry<Integer, Paciente> entry = entries.next();
                 String output = String.format("%s , %s", entry.getKey(), entry.getValue() + "\r\n");
                 bufferedWriter.write(output);
@@ -224,6 +224,7 @@ public class Consultorio {
                         nombre = teclado.nextLine();
                         id = listaPacientes.size();
                         listaPacientes.put(id+1, new Paciente(nombre));
+                        SavePa(listaPacientes);
                         break;
 
                     case 3:
