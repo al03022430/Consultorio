@@ -1,19 +1,20 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Consultorio {
     private static ArrayList<Usuario> usuario = new ArrayList<Usuario>();
     public static HashMap<Integer, Medico> listaMedicos = new HashMap<Integer, Medico>();
+    Scanner Me = new Scanner(System.in);
     public static HashMap<Integer, Paciente> listaPacientes = new HashMap<Integer, Paciente>();
-    public static HashMap<Integer, Recepcion> listaRece = new HashMap<Integer, Recepcion>();
+    Scanner Pa = new Scanner(System.in);
+
     public static HashMap<Integer, Cita> listaCitas = new HashMap<Integer, Cita>();
+    Scanner Ci = new Scanner(System.in);
     private static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
-        crearlistas (listaMedicos, listaPacientes, listaRece);
+        crearlistas (listaMedicos, listaPacientes, listaCitas);
         if (validarAcceso()) {
             System.out.println("Acceso Autorizado");
             menu();
@@ -25,9 +26,9 @@ public class Consultorio {
     }
     public static void crearlistas (HashMap listaMedicos, HashMap listaPacientes, HashMap listaRece) {
 
-        String inputFilenameMedicos = "src/CitaMedica/Medicos.cvs";
-        String inputFilenamePacientes = "src/CitaMedica/Pacientes.cvs";
-        String inputFilenameRecepcionista = "src/CitaMedica/Recepcionistas.cvs";
+        String inputFilenameMedicos = "src/BD/Medicos.cvs";
+        String inputFilenamePacientes = "src/BD/Pacientes.cvs";
+        String inputFilenameRecepcionista = "src/BD/Recepcionistas.cvs";
         BufferedReader bufferedReader = null;
         String Nombre = "";
         String Especialidad = "";
@@ -97,9 +98,88 @@ public class Consultorio {
             }
         }
     }
+    public static void list(HashMap Cita) {
+        System.out.println("\n Agenda de Citas");
+        for (Iterator<Map.Entry<String, Cita>> entries = Cita.entrySet().iterator(); entries.hasNext(); ) {
+            Map.Entry<String, Cita> entry = entries.next();
+            String output = String.format("%s :  %s:", entry.getKey(), entry.getValue());
+            System.out.println(output);
+        }
+    }
+
+    public static void saveMe(HashMap Medico){
+        String outputFilename = "src/BD/Medicos.cvs";
+        BufferedWriter bufferedWriter = null;
+        try {
+            bufferedWriter = new BufferedWriter(new FileWriter(outputFilename));
+            for (Iterator<Map.Entry<Integer, Medico>> entries = Medico.entrySet().iterator(); entries.hasNext(); ) {
+                Map.Entry<Integer, Medico> entry = entries.next();
+                String output = String.format("%s , %s", entry.getKey(), entry.getValue() + "\r\n");
+                bufferedWriter.write(output);
+            }
+        } catch(IOException e) {
+            System.out.println("IOException catched while reading: " + e.getMessage());
+        } finally {
+            try {
+                if (bufferedWriter != null) {
+                    bufferedWriter.close();
+                }
+            } catch (IOException e) {
+                System.out.println("IOException catched while closing: " + e.getMessage());
+            }
+        }
+    }
+    public static void saveCi(HashMap listaCitas){
+        String outputFilename = "src/BD/Citas.cvs";
+        BufferedWriter bufferedWriter = null;
+        try {
+            bufferedWriter = new BufferedWriter(new FileWriter(outputFilename));
+            for (Iterator<Map.Entry<Integer, Cita>> entries = listaCitas.entrySet().iterator(); entries.hasNext(); ) {
+                Map.Entry<Integer, Cita> entry = entries.next();
+                String output = String.format("%s , %s", entry.getKey(), entry.getValue() + "\r\n");
+                bufferedWriter.write(output);
+            }
+        } catch(IOException e) {
+            System.out.println("IOException catched while reading: " + e.getMessage());
+        } finally {
+            try {
+                if (bufferedWriter != null) {
+                    bufferedWriter.close();
+                }
+            } catch (IOException e) {
+                System.out.println("IOException catched while closing: " + e.getMessage());
+            }
+        }
+    }
+    public static void SavePa(HashMap Paciente){
+        String outputFilename = "src/BD/Pacientes.cvs";
+        BufferedWriter bufferedWriter = null;
+        try {
+            bufferedWriter = new BufferedWriter(new FileWriter(outputFilename));
+            for (Iterator<Map.Entry<Integer, Paciente>> entries = Paciente.entrySet().iterator(); entries.hasNext(); ) {
+                Map.Entry<Integer, Paciente> entry = entries.next();
+                String output = String.format("%s , %s", entry.getKey(), entry.getValue() + "\r\n");
+                bufferedWriter.write(output);
+            }
+        } catch(IOException e) {
+            System.out.println("IOException catched while reading: " + e.getMessage());
+        } finally {
+            try {
+                if (bufferedWriter != null) {
+                    bufferedWriter.close();
+                }
+            } catch (IOException e) {
+                System.out.println("IOException catched while closing: " + e.getMessage());
+            }
+        }
+    }
+
+
     private static boolean validarAcceso( ) {
 
         usuario.add(new Usuario("Administrator", "1234"));
+        usuario.add(new Usuario("Doctor", "1234"));
+        usuario.add(new Usuario("Recepcion", "1234"));
 
 
         System.out.println("CLINICA AGENDA CITA");
@@ -119,8 +199,8 @@ public class Consultorio {
             System.out.println("\n Seleccione la Opcion deseada");
             System.out.println("1. Alta Doctor");
             System.out.println("2. Alta Paciente");
-            System.out.println("3. Alta Recepcionista");
-            System.out.println("4. Alta Cita");
+            System.out.println("3. Alta Cita");
+            System.out.println("4. Agenda de Citas");
             System.out.println("5. Salir");
             try {
                 System.out.println("Escribe una de las opciones:");
@@ -130,12 +210,14 @@ public class Consultorio {
                 switch (opcion) {
                     case 1:
                         String especialidad = "";
+
                         System.out.print("Nombre Doctor: ");
                         nombre = teclado.nextLine();
                         System.out.print("Especialidad: ");
                         especialidad = teclado.nextLine();
                         id = listaMedicos.size();
                         listaMedicos.put(id+1, new Medico(nombre,especialidad));
+                        saveMe(listaMedicos);
                         break;
                     case 2:
                         System.out.print("Nombre Paciente: ");
@@ -143,16 +225,8 @@ public class Consultorio {
                         id = listaPacientes.size();
                         listaPacientes.put(id+1, new Paciente(nombre));
                         break;
+
                     case 3:
-                        String Funcioones = "";
-                        System.out.print("Nombre Recepcionista: ");
-                        nombre = teclado.nextLine();
-                        System.out.print("Funciones: ");
-                        especialidad = teclado.nextLine();
-                        id = listaRece.size();
-                        listaRece.put(id+1, new Recepcion(nombre,Funcioones));
-                        break;
-                    case 4:
                         int medico;
                         int paciente;
                         String fecha;
@@ -187,14 +261,15 @@ public class Consultorio {
                             System.out.print("Seleccione Fecha: ");
                             System.out.println("Introduzca la fecha con formato yyyy-MM-ddHH:mm:ss");
                             Scanner sc = new Scanner(System.in);
-
                             fecha = sc.nextLine();
                             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-ddHH:mm:ss");
                             String date = fecha;
                             try{
                                 testDate = df.parse(date);
                                 valid = true;
-                                //System.out.println("Ahora hemos creado un objeto date con la fecha indicada, "+testDate);
+                                saveCi(listaCitas);
+
+
                             } catch (Exception e){ System.out.println("Formato invalido para Fecha intente de nuevo!!");}
 
                             if (df != null) {
@@ -220,6 +295,10 @@ public class Consultorio {
                         Paciente = Paciente.substring(coma+2, Paciente.length()).toString();
                         listaCitas.put(id+1, new Cita(Medico, Paciente, testDate.toString(), motivo));
                         System.out.print(listaCitas.get(id+1));
+                        saveCi(listaCitas);
+                        break;
+                    case 4:
+                        list(listaCitas);
                         break;
                     case 5:
                         salir = true;

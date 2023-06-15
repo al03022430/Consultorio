@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc00c672-b125-4081-b378-84dbedcd3a4d" name="Changes" comment="Se termina clase Medico.java">
-      <change afterPath="$PROJECT_DIR$/src/Paciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recepcion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Usuario.java" afterDir="false" />
+    <list default="true" id="fc00c672-b125-4081-b378-84dbedcd3a4d" name="Changes" comment="Se agregan campos para generar archivos CVS">
+      <change afterPath="$PROJECT_DIR$/src/BD/Medicos.cvs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BD/Pacientes.cvs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Consultorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consultorio.java" afterDir="false" />
     </list>
@@ -26,11 +25,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -52,6 +50,11 @@
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/c.edomin/Documents/GitHub/CumputacionJava/Evidencia/Consultorio/src/Main.java&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Consultorio" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -89,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686779550388</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Menu de Adminstrador Funcionando">
+      <created>1686787205302</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686787205302</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -97,7 +107,9 @@
     <MESSAGE value="Se termina clase Consultorio.java" />
     <MESSAGE value="Se termina clase Citas.java" />
     <MESSAGE value="Se termina clase Medico.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se termina clase Medico.java" />
+    <MESSAGE value="Menu de Adminstrador Funcionando" />
+    <MESSAGE value="Se agregan campos para generar archivos CVS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan campos para generar archivos CVS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
