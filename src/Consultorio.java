@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Consultorio {
-    private static ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+    private static ArrayList<Usuario> usuario = new ArrayList<Usuario>();
     public static HashMap<Integer, Medico> listaMedicos = new HashMap<Integer, Medico>();
     public static HashMap<Integer, Paciente> listaPacientes = new HashMap<Integer, Paciente>();
     public static HashMap<Integer, Recepcion> listaRece = new HashMap<Integer, Recepcion>();
@@ -15,7 +15,7 @@ public class Consultorio {
     public static void main(String[] args) {
         crearlistas (listaMedicos, listaPacientes, listaRece);
         if (validarAcceso()) {
-            System.out.println("Usuario o contraseña incorecto");
+            System.out.println("Acceso Autorizado");
             menu();
         }
         else
@@ -31,6 +31,7 @@ public class Consultorio {
         BufferedReader bufferedReader = null;
         String Nombre = "";
         String Especialidad = "";
+        String Funcioones = "";
         try {
             bufferedReader = new BufferedReader(new FileReader(inputFilenameMedicos));
 
@@ -80,9 +81,9 @@ public class Consultorio {
             while ((line = bufferedReader.readLine()) != null) {
                 int coma = line.indexOf(',');
                 Nombre = line.substring(0, coma);
-                Especialidad = line.substring(coma+1, line.length());
+                Funcioones = line.substring(coma+1, line.length());
                 int id = listaMedicos.size();
-                listaRece.put(id+1, new (Nombre,Especialidad));
+                listaRece.put(id+1, new Recepcion (Nombre, Funcioones));
             }
         } catch(IOException e) {
             System.out.println("IOException catched while reading: " + e.getMessage());
@@ -98,7 +99,7 @@ public class Consultorio {
     }
     private static boolean validarAcceso( ) {
 
-        usuarios.add(new Usuario("Administrator", "1234"));
+        usuario.add(new Usuario("Administrator", "1234"));
 
 
         System.out.println("CLINICA AGENDA CITA");
@@ -106,8 +107,8 @@ public class Consultorio {
         String nombre = teclado.nextLine();
         System.out.print("Contraseña: ");
         String contraseña = teclado.nextLine();
-        Usuario admin = new Usuario(nombre, contraseña);
-        return usuarios.contains(admin);
+        Usuario Administrator = new Usuario(nombre, contraseña);
+        return usuario.contains(Administrator);
     }
     private static void menu(){
         Scanner sn = new Scanner(System.in);
@@ -143,13 +144,13 @@ public class Consultorio {
                         listaPacientes.put(id+1, new Paciente(nombre));
                         break;
                     case 3:
-                        String especialidad = "";
+                        String Funcioones = "";
                         System.out.print("Nombre Recepcionista: ");
                         nombre = teclado.nextLine();
-                        System.out.print("Especialidad: ");
+                        System.out.print("Funciones: ");
                         especialidad = teclado.nextLine();
                         id = listaRece.size();
-                        listaRece.put(id+1, new Recepcionista(nombre,especialidad));
+                        listaRece.put(id+1, new Recepcion(nombre,Funcioones));
                         break;
                     case 4:
                         int medico;
@@ -220,7 +221,7 @@ public class Consultorio {
                         listaCitas.put(id+1, new Cita(Medico, Paciente, testDate.toString(), motivo));
                         System.out.print(listaCitas.get(id+1));
                         break;
-                    case 4:
+                    case 5:
                         salir = true;
                         break;
                     default:

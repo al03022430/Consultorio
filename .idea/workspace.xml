@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc00c672-b125-4081-b378-84dbedcd3a4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Consultorio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Consultorio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="fc00c672-b125-4081-b378-84dbedcd3a4d" name="Changes" comment="Se termina clase Medico.java">
+      <change afterPath="$PROJECT_DIR$/src/Paciente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Recepcion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Consultorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consultorio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,19 +26,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2d583c30-c929-46d4-a84f-e19cb12f7918" />
+        <option name="url" value="https://github.com/al03022430/Consultorio.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2RD8vsiBJtLNPimEVPPUBVT7Xnn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "onboarding.tips.debug.path": "/Users/c.edomin/Documents/GitHub/CumputacionJava/Evidencia/Consultorio/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/c.edomin/Documents/GitHub/CumputacionJava/Evidencia/Consultorio/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,7 +61,43 @@
       <option name="presentableId" value="Default" />
       <updated>1686773525488</updated>
     </task>
+    <task id="LOCAL-00001" summary="Inicio de programa Clinica, declaracion de clases">
+      <created>1686775426886</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686775426887</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se termina clase Consultorio.java">
+      <created>1686778926744</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686778926744</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se termina clase Citas.java">
+      <created>1686779130838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686779130838</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se termina clase Medico.java">
+      <created>1686779550388</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686779550388</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Inicio de programa Clinica, declaracion de clases" />
+    <MESSAGE value="Se termina clase Consultorio.java" />
+    <MESSAGE value="Se termina clase Citas.java" />
+    <MESSAGE value="Se termina clase Medico.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se termina clase Medico.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
