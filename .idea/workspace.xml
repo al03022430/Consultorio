@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc00c672-b125-4081-b378-84dbedcd3a4d" name="Changes" comment="Correcion de problemas con listado de Pacientes">
-      <change afterPath="$PROJECT_DIR$/src/BD/Pacientes.cvs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BD/Medicos.cvs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BD/Medicos.cvs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Consultorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consultorio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +38,9 @@
         <option name="url" value="https://github.com/al03022430/Consultorio.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2RD8vsiBJtLNPimEVPPUBVT7Xnn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -126,6 +126,17 @@
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
